@@ -135,7 +135,7 @@ String color = "";
                   }
                   %>
 
-                  <td width="30px" align="center" class='<%=color %>'">
+                  <td width="30px" align="center" class='<%=color %>'>
                     <bean:write name="kinmuJissekiNyuryokuKakuninList" property="youbi" /><br>
                   </td>
                   <td width="50px" align="center" style="vertical-align: middle;">
