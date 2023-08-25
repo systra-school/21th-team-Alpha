@@ -49,8 +49,9 @@
     /**
      * V‹K“o˜^‰æ–Ê‚Ö
      */
+     /** 8/24 kikin‚ğkikin_test‚É•ÏX **/
     function shiftMstMntRegistInit() {
-        document.forms[0].action = "/kikin/shiftMstMntRegistInit.do";
+        document.forms[0].action = "/kikin_test/shiftMstMntRegistInit.do";
         document.forms[0].submit();
     }
 
