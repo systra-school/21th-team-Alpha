@@ -18,9 +18,9 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
-    <script type="text/javascript" src="/kikin/pages/js/common.js"></script>
-    <script type="text/javascript" src="/kikin/pages/js/checkCommon.js"></script>
-    <script type="text/javascript" src="/kikin/pages/js/message.js"></script>
+    <script type="text/javascript" src="pages/js/common.js"></script>
+    <script type="text/javascript" src="pages/js/checkCommon.js"></script>
+    <script type="text/javascript" src="pages/js/message.js"></script>
     <script type="text/javascript" language="Javascript1.1">
     <!--
 
@@ -89,7 +89,7 @@
         <table>
           <tr>
             <td id="headLeft">
-              <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin/shainMstMntRegistBack.do')" />
+              <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin_test/shainMstMntRegistBack.do')" />
             </td>
             <td id="headCenter">
               社員マスタメンテナンス画面（新規登録）

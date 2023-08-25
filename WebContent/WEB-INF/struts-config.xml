@@ -96,7 +96,8 @@
         scope="session"
         validate="true">
         <forward name="success" path="/pages/mst/shainMstMnt.jsp"/>
-        <forward name="nodata" path="/pages/mst/shainMstMntRegist.jsp"/>
+        <!-- Oosato.Miku　訂正 -->
+        <forward name="nodata" path="/pages/mst/shainMstMnt.jsp"/>
       </action>
       <!-- 社員マスタメンテナンス 更新 -->
       <action
@@ -107,7 +108,8 @@
         scope="session"
         validate="true">
         <forward name="success" path="/pages/mst/shainMstMnt.jsp"/>
-        <forward name="nodata" path="/pages/mst/shainMstMntRegist.jsp"/>
+        <!-- Oosato.Miku　訂正 -->
+        <forward name="nodata" path="/pages/mst/shainMstMnt.jsp"/>
       </action>
       <!-- 社員マスタメンテナンス 戻る -->
       <action

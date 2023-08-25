@@ -24,9 +24,11 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
-    <script type="text/javascript" src="/kikin/pages/js/common.js"></script>
-    <script type="text/javascript" src="/kikin/pages/js/checkCommon.js"></script>
-    <script type="text/javascript" src="/kikin/pages/js/message.js"></script>
+    
+    
+    <script type="text/javascript" src="pages/js/common.js"></script>
+    <script type="text/javascript" src="pages/js/checkCommon.js"></script>
+    <script type="text/javascript" src="pages/js/message.js"></script>
     <script type="text/javascript" language="Javascript1.1">
     <!--
     /**
@@ -49,8 +51,12 @@
     /**
      * 新規登録画面へ
      */
+     /* 
+     ★Oosato.Miku パス変更
+     /kikin/shainMstMntRegistInit.do→/kikin_test/shainMstMntRegistInit.do
+     */
     function shainMstMntRegistInit() {
-        document.forms[0].action = "/kikin/shainMstMntRegistInit.do";
+        document.forms[0].action = "/kikin_test/shainMstMntRegistInit.do";
         document.forms[0].submit();
     }
 
@@ -117,7 +123,9 @@
     </script>
 
     <title>社員マスタメンテナンス画面</title>
-
+    <!--
+     ★Oosato.Miku パス変更
+      -->
     <link href="/kikin_test/pages/css/common.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
@@ -126,7 +134,11 @@
         <table>
           <tr>
             <td id="headLeft">
-              <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin/shainMstMntBack.do')" />
+             <!--
+     			★Oosato.Miku パス変更
+     			doSubmit('/kikin/shainMstMntBack.do')→doSubmit('/kikin_test/shainMstMntBack.do')
+      		-->
+              <input value="戻る" type="button" class="smlButton"  onclick="doSubmit('/kikin_test/shainMstMntBack.do')" />
             </td>
             <td id="headCenter">
               社員マスタメンテナンス
