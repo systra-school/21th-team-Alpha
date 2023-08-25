@@ -32,7 +32,7 @@ String color = "";
      * ŒŸõ
      */
     function submitSearch() {
-        doSubmit('/kikin/kinmuJissekiKakuninSearch.do');
+        doSubmit('/kikin_test/kinmuJissekiKakuninSearch.do');
     }
     -->
     </script>

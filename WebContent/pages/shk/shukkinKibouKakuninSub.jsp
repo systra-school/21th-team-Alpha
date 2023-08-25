@@ -40,7 +40,7 @@ String color = "";
      * ŒŸõ
      */
     function submitSearch() {
-        doSubmit('/kikin/shukkinKibouKakuninSubSearch.do');
+        doSubmit('/kikin_test/shukkinKibouKakuninSubSearch.do');
     }
     -->
     </script>

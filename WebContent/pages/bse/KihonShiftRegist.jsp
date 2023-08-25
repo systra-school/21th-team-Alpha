@@ -32,9 +32,9 @@
 %>
 <html>
   <head>
-    <script type="text/javascript" src="/kikin/pages/js/common.js"></script>
-    <script type="text/javascript" src="/kikin/pages/js/checkCommon.js"></script>
-    <script type="text/javascript" src="/kikin/pages/js/message.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/common.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/checkCommon.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/message.js"></script>
     <script type="text/javascript" language="Javascript1.1">
     <!--
     /**
@@ -58,7 +58,7 @@
      * V‹K“o˜^‰æ–Ê‚Ö
      */
     function shainMstMntRegistInit() {
-        document.forms[0].action = "/kikin/shainMstMntRegistInit.do";
+        document.forms[0].action = "/kikin_test/shainMstMntRegistInit.do";
         document.forms[0].submit();
     }
 
@@ -128,7 +128,7 @@
       </div>
 
       <div class="backBtn">
-        <input value="–ß‚é" type="button" class="smlButton"  onclick="doSubmit('/kikin/menu.do')" />
+        <input value="–ß‚é" type="button" class="smlButton"  onclick="doSubmit('/kikin_test/menu.do')" />
       </div>
 
       <div class="logoutBtn">
