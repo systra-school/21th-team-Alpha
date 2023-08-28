@@ -13,9 +13,10 @@
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
     <html:javascript formName="loginForm" />
-    <script type="text/javascript" src="/kikin-test/test/pages/js/common.js"></script>
-    <script type="text/javascript" /kikin-test/pages/js/checkCommon.js"></script>
-    <script type="text/javascr/kikin-test/c="/kikin_test/pages/js/message.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/common.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/checkCommon.js"></script>
+    <script type="text/javascript" src="/kikin_test/pages/js/message.js"></script>
+    
 
     <title>ƒƒjƒ…[‰æ–Ê</title>
     <link href="/kikin_test/pages/css/common.css" rel="stylesheet" type="text/css" />
