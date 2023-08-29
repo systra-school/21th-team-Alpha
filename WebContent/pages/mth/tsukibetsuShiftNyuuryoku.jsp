@@ -28,7 +28,8 @@
 <bean:define id="maxPage" name="tsukibetsuShiftNyuuryokuForm" property="maxPage" type="java.lang.Integer"/>
 
 <%
-final int heightSize = 22;
+// Miku.Oosato 高さ指定変更
+final int heightSize = 26;
 
 int intShowLength = Integer.parseInt(showLength);
 
@@ -51,11 +52,11 @@ if (listSize > intShowLength) {
     <script type="text/javascript" src="/kikin_test/pages/js/checkCommon.js"></script>
     <script type="text/javascript" src="/kikin_test/pages/js/message.js"></script>
     <script type="text/javascript" language="Javascript1.1">
-    <!--
-
-    /**
-     * 出勤希望反映
+    
+	<!--
+     /* 出勤希望反映
      */
+     
     function submitShukkinKibou() {
         // サブミット
         doSubmit('/kikin_test/tsukibetsuShiftNyuuryokuShukkinKibou.do');
@@ -105,9 +106,11 @@ if (listSize > intShowLength) {
           </tr>
         </table>
       </div>
-      <div id="gymBody" style="overflow: hidden;">
+      <%--Miku.Oosato 表のズレ調整 --%>
+      <div id="gymBody" style="overflow: auto;">
         <html:form action="/tsukibetsuShiftNyuuryokuPage" >
-          <div style="margin-left:50px;">
+       	 <%--Miku.Oosato 表のズレ調整 --%>
+          <div style="margin-left:80px;">
             <div style="height: 25px;">
               表示年月：
               <bean:define id="sessionYearMonth" name="tsukibetsuShiftNyuuryokuForm" property="yearMonth" type="String"/>
@@ -539,10 +542,12 @@ if (listSize > intShowLength) {
         </html:form>
       </div>
       <div id="footer">
-      <div style="margin-left:50px;">
-          <input value="凡例表示" type="button" class="lngButton"  onclick="openWindow()" />
-          <input value="基本シフト反映" type="button" class="lngButton"  />
-          <input value="出勤希望日反映" type="button" class="lngButton"  onclick="submitShukkinKibou()" />
+      <%--Miku.Oosato 表のズレ調整 --%>
+      <div style="margin-left:80px;">
+      <%--Miku.Oosato ボタンカラー追加（cssファイルでは反映しないため）--%>
+          <input value="凡例表示" type="button" class="lngButton" style="border-color: white black black white; background-color:rgb(192, 192, 192)" onclick="openWindow()" />
+          <input value="基本シフト反映" type="button" class="lngButton" style="border-color: white black black white; background-color:rgb(192, 192, 192)" />
+          <input value="出勤希望日反映" type="button" class="lngButton" style="border-color: white black black white; background-color:rgb(192, 192, 192)" onclick="submitShukkinKibou()" />
         </div>
         <table>
           <tr>
