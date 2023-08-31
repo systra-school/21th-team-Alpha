@@ -347,7 +347,8 @@
       </div>
       <div id="footer">
       	<div style="margin-left:50px;">
-            <input value="凡例表示" type="button" class="lngButton"  onclick="openWindow()" />
+      	<!-- Ikezoe 凡例表示ボタンの色を変更 -->
+            <input value="凡例表示" type="button" class="lngButton" style="border-color: white black black white; background-color:rgb(192, 192, 192)" onclick="openWindow()" />
         </div>
         <table>
           <tr>
