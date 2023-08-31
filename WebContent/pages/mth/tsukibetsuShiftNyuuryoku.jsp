@@ -548,16 +548,15 @@ if (listSize > intShowLength) {
           <input value="–}—á•\Ž¦" type="button" class="lngButton" style="border-color: white black black white; background-color:rgb(192, 192, 192)" onclick="openWindow()" />
           <input value="Šî–{ƒVƒtƒg”½‰f" type="button" class="lngButton" style="border-color: white black black white; background-color:rgb(192, 192, 192)" />
           <input value="o‹ÎŠó–]“ú”½‰f" type="button" class="lngButton" style="border-color: white black black white; background-color:rgb(192, 192, 192)" onclick="submitShukkinKibou()" />
+          
+        </div>
+        <%--•£ã@V‚½‚É“o˜^—p‚ÌdivƒNƒ‰ƒX‚ðì¬‚µAmargin‚ð’²®‚µ‚½ --%>>
+        <div style="margin-left:1100px; margin-top:-20px;">
+        <input value="“o˜^" type="button"  class="smlButton" style="border-color: white black black white; background-color:rgb(192, 192, 192)" onclick="submitRegist()" />
         </div>
         <table>
           <tr>
             <td id="footLeft">
-            </td>
-            <td id="footCenter" style="text-align: right;">
-
-            </td>
-            <td id="footRight">
-              <input value="“o˜^" type="button" class="smlButton"  onclick="submitRegist()" />
             </td>
           </tr>
         </table>
