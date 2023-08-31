@@ -12,13 +12,12 @@ import java.text.ParseException;
 import java.util.List;
 import java.util.Map;
 
-import exception.CommonException;
-
 import business.db.dao.act.KinmuJissekiDao;
 import business.dto.LoginUserDto;
 import business.dto.act.KinmuJissekiDto;
 import business.logic.utils.CheckUtils;
 import business.logic.utils.CommonUtils;
+import exception.CommonException;
 
 /**
  * 説明：ログイン処理のロジック
@@ -196,7 +195,7 @@ public class KinmuJissekiLogic {
             jitsudouTime.append(CommonUtils.padWithZero(String.valueOf(jitsudouTimeH), 2));
             jitsudouTime.append(colon);
             jitsudouTime.append(CommonUtils.padWithZero(String.valueOf(jitsudouTimeM), 2));
-
+            
             /*
              * 時間外時間算出のために
              * シフトの時間を取得する。
@@ -211,9 +210,28 @@ public class KinmuJissekiLogic {
                 kinmuJissekiDto.setKyuujitsuTime(jitsudouTime.toString());
             } else {
                 // シフトがある場合
+            	long startTimeShiftLong = CommonUtils.getSecond(startTimeShift);
+               long endTimeShiftLong = CommonUtils.getSecond(endTimeShift);
+               long breakTimeShiftLong = CommonUtils.getSecond(breakTimeShift);
+               
+               // 時間外時間 = 実労働時間 - (終了時間(シフト)(秒換算) - 開始時間(シフト)(秒換算) - 休憩時間(シフト)(秒換算))
+               long jikangaiTimeS = jitsudouTimeS - (endTimeShiftLong - startTimeShiftLong - breakTimeShiftLong); // 秒
+               
+               // 秒を60で除算する → 分に変換。
+               long jikangaiTimeM = jikangaiTimeS / 60; // 分
+               // 分を60で除算する → 時に変換。
+               long jikangaiTimeH = jikangaiTimeM / 60; // 時
+               // 分を60で除算したときの余り → 分を算出する。
+               jikangaiTimeM = jikangaiTimeM % 60; // 余りが分になる
 
-                // 実働時間を勤務実績Dtoの勤務実績へセット
-                kinmuJissekiDto.setJitsudouTime(jitsudouTime.toString());
+               // 算出した値を画面へ表示する形式にする hh:mm
+               StringBuffer jikangaiTime = new StringBuffer();
+               jikangaiTime.append(CommonUtils.padWithZero(String.valueOf(jikangaiTimeH), 2));
+               jikangaiTime.append(colon);
+               jikangaiTime.append(CommonUtils.padWithZero(String.valueOf(jikangaiTimeM), 2));
+               
+               kinmuJissekiDto.setJitsudouTime(jitsudouTime.toString());
+               kinmuJissekiDto.setJikangaiTime(jikangaiTime.toString());
             }
         }
     }
