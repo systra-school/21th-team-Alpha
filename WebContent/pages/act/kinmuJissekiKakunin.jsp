@@ -142,10 +142,11 @@ String color = "";
                     <bean:write name="kinmuJissekiNyuryokuKakuninList" property="symbol" /><br>
                   </td>
                   <td width="100px" align="center">
-                    <bean:write name="kinmuJissekiNyuryokuKakuninList" property="startTime" /><br>
+                  <!-- Ikezoe endTime‚ÆstartTime‚ð“ü‚ê‘Ö‚¦‚Ü‚µ‚½ -->
+                    <bean:write name="kinmuJissekiNyuryokuKakuninList" property="endTime" /><br>
                   </td>
                   <td width="100px" align="center">
-                    <bean:write name="kinmuJissekiNyuryokuKakuninList" property="endTime" /><br>
+                    <bean:write name="kinmuJissekiNyuryokuKakuninList" property="startTime" /><br>
                   </td>
                   <td width="100px" align="center">
                     <bean:write name="kinmuJissekiNyuryokuKakuninList" property="breakTime" /><br>
