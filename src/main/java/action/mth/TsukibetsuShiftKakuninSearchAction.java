@@ -86,7 +86,8 @@ public class TsukibetsuShiftKakuninSearchAction extends TsukibetsuShiftNyuuryoku
         // セレクトボックスの取得
         ComboListUtilLogic comboListUtils = new ComboListUtilLogic();
         Map<String, String> shiftCmbMap = comboListUtils.getComboShift(true);
-        Map<String, String> yearMonthCmbMap = comboListUtils.getComboYearMonth(CommonUtils.getFisicalDay(CommonConstant.yearMonthNoSl), 2, ComboListUtilLogic.KBN_YEARMONTH_NEXT, false);
+        //Miku.Oosato
+        Map<String, String> yearMonthCmbMap = comboListUtils.getComboYearMonth(CommonUtils.getFisicalDay(CommonConstant.yearMonthNoSl), 3, ComboListUtilLogic.KBN_YEARMONTH_NEXT, false);
         if (CheckUtils.isEmpty(tsukibetsuShiftDtoMap)) {
             // データなし
             TsukibetsuShiftKakuninBean tsukibetsuShiftBean = new TsukibetsuShiftKakuninBean();
@@ -149,7 +150,8 @@ public class TsukibetsuShiftKakuninSearchAction extends TsukibetsuShiftNyuuryoku
 
             for (int i = 0; i < methods.length; i++) {
                 // "setShiftIdXX" のメソッドを動的に実行する
-                if (methods[i].getName().startsWith("setSymbol") && listSize > index) {
+            	//★Miku.Oosato 11月が表示されなかった原因訂正
+                if (methods[i].getName().startsWith("setShainId") && listSize > index) {
                     TsukibetsuShiftDto tsukibetsuShiftDto = tsukibetsuShiftDtoList.get(index);
                     // メソッド実行
                     methods[i].invoke(tsukibetsuShiftKakuninBean, tsukibetsuShiftDto.getSymbol());
