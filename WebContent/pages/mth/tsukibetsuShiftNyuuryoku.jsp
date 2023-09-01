@@ -551,7 +551,7 @@ if (listSize > intShowLength) {
           
         </div>
         <%--•£ã@V‚½‚É“o˜^—p‚ÌdivƒNƒ‰ƒX‚ðì¬‚µAmargin‚ð’²®‚µ‚½ --%>>
-        <div style="margin-left:1100px; margin-top:-20px;">
+        <div style="margin-left:1100px; margin-top:-40px;">
         <input value="“o˜^" type="button"  class="smlButton" style="border-color: white black black white; background-color:rgb(192, 192, 192)" onclick="submitRegist()" />
         </div>
         <table>
