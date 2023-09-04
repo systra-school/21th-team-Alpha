@@ -53,7 +53,7 @@
      * ŒŸõ
      */
     function submitSearch() {
-        doSubmit('/kikin_test/tsukibetsuShiftNyuuryokuSearch.do');
+        doSubmit('/kikin_test/shukkinKibouNyuuryokuSearch.do');
     }
 
     /**
@@ -86,7 +86,7 @@
         </table>
       </div>
       <div id="gymBody" style="overflow: hidden;">
-        <html:form action="/tsukibetsuShiftNyuuryokuInit.do" >
+        <html:form action="/shukkinKibouNyuuryokuInit.do" >
           <div style="margin-left:25px;">
             <div style="height: 25px;">
               •\¦”NŒF
