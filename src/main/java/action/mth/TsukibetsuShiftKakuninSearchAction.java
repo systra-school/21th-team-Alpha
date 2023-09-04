@@ -150,8 +150,8 @@ public class TsukibetsuShiftKakuninSearchAction extends TsukibetsuShiftNyuuryoku
 
             for (int i = 0; i < methods.length; i++) {
                 // "setShiftIdXX" のメソッドを動的に実行する
-            	//★Miku.Oosato 11月が表示されなかった原因訂正
-                if (methods[i].getName().startsWith("setShainId") && listSize > index) {
+            	//★Miku.Oosato 月別入力で表示されていたシンボルが表示されるようになった
+                if (methods[i].getName().startsWith("setSymbol") && listSize > index) {
                     TsukibetsuShiftDto tsukibetsuShiftDto = tsukibetsuShiftDtoList.get(index);
                     // メソッド実行
                     methods[i].invoke(tsukibetsuShiftKakuninBean, tsukibetsuShiftDto.getSymbol());
