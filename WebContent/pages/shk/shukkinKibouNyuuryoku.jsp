@@ -46,7 +46,7 @@
      */
     function submitRegist() {
         // サブミット
-        doSubmit('/kikin_test/syukkinKibouNyuuryokuRegist.do');
+        doSubmit('/kikin_test/shukkinKibouNyuuryokuRegist.do');
     }
 
     /**
