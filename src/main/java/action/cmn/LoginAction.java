@@ -8,22 +8,24 @@ package action.cmn;
 
 import java.util.Enumeration;
 
-import javax.servlet.http.*;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.struts.action.*;
-
-import constant.CommonConstant;
-import constant.RequestSessionNameConstant;
-
-
-import form.cmn.LoginForm;
+import org.apache.struts.action.Action;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
 
 import business.dto.LoginUserDto;
 import business.dto.cmn.LoginDto;
 import business.logic.cmn.LoginLogic;
 import business.logic.utils.CheckUtils;
+import constant.CommonConstant;
+import constant.RequestSessionNameConstant;
+import form.cmn.LoginForm;
 
 /**
  * 説明：ログイン処理のアクション
@@ -75,11 +77,16 @@ public class LoginAction extends Action {
         LoginDto loginDto = loginLogic.getShainData(loginForm);
 
         if (CheckUtils.isEmpty(loginDto)) {
-            forward = "error";
+        	/** 黒岩 ログインエラーの表示判定 **/
+        	req.setAttribute("loginErrorFlag", true);
+        	forward = "error";
         } else {
 
             // ログインユーザ保持用Dtoを作成する
             this.createLoginUserData(session, loginDto);
+            
+            /** 黒岩 ログインエラーの表示判定後のフラグリムーブ **/
+            session.removeAttribute("loginErrorFlag");
 
             forward = CommonConstant.SUCCESS;
         }

@@ -7,6 +7,17 @@
 	<meta http-equiv="Pragma" content="no-cache">
 	<meta http-equiv="Cache-Control" content="no-cache">
 	<meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
+	<%-- 黒岩 エラーメッセージ表示 --%>
+	<% 
+   Boolean loginErrorFlag = (Boolean) request.getAttribute("loginErrorFlag");
+   String displayAlert = (loginErrorFlag != null && loginErrorFlag) ? "true" : "false";
+%>
+		<script type="text/javascript" src="/kikin_test/pages/js/message.js"></script>
+		<script type="text/javascript">
+   	 if (<%= displayAlert %>) {
+        alert(messageArr["E-MSG-000002"]);
+    	}
+   	 </script>
 	<html:javascript formName="loginForm" />
 	<title>ログイン画面</title>
 	<link href="/kikin_test/pages/css/common.css" rel="stylesheet" type="text/css" />
