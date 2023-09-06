@@ -11,6 +11,7 @@
  * 変更履歴
  * 1.0  2010/09/13 Kazuya.Naraki
  */
+
 %>
 <%@page contentType="text/html; charset=Shift_JIS" pageEncoding="Shift_JIS"%>
 <%@ page import="constant.RequestSessionNameConstant"%>
@@ -52,6 +53,12 @@ if (listSize > intShowLength) {
     <script type="text/javascript" src="/kikin_test/pages/js/checkCommon.js"></script>
     <script type="text/javascript" src="/kikin_test/pages/js/message.js"></script>
     <script type="text/javascript" language="Javascript1.1">
+    
+    <%--takaya ボタンのjs追加--%>
+    function submitShukkinKihon() {
+        // サブミット
+        doSubmit('/kikin_test/tsukibetsuShiftNyuuryokuShukkinKihon.do');
+    }
     
 	<!--
      /* 出勤希望反映
@@ -546,11 +553,12 @@ if (listSize > intShowLength) {
       <div style="margin-left:80px;">
       <%--Miku.Oosato ボタンカラー追加（cssファイルでは反映しないため）--%>
           <input value="凡例表示" type="button" class="lngButton" style="border-color: white black black white; background-color:rgb(192, 192, 192)" onclick="openWindow()" />
-          <input value="基本シフト反映" type="button" class="lngButton" style="border-color: white black black white; background-color:rgb(192, 192, 192)" />
+          <%--takaya onclick追加--%>
+          <input value="基本シフト反映" type="button" class="lngButton" style="border-color: white black black white; background-color:rgb(192, 192, 192)" onclick="submitShukkinKihon()" />
           <input value="出勤希望日反映" type="button" class="lngButton" style="border-color: white black black white; background-color:rgb(192, 192, 192)" onclick="submitShukkinKibou()" />
           
         </div>
-        <%--淵上　新たに登録用のdivクラスを作成し、marginを調整した --%>>
+        <%--淵上　新たに登録用のdivクラスを作成し、marginを調整した --%>
         <div style="margin-left:1100px; margin-top:-40px;">
         <input value="登録" type="button"  class="smlButton" style="border-color: white black black white; background-color:rgb(192, 192, 192)" onclick="submitRegist()" />
         </div>
