@@ -195,16 +195,18 @@
                     <bean:write name="kinmuJissekiNyuryokuKakuninList" property="kadouDayDisp" /><br>
                   </td>
                   <bean:define id="youbi" name="kinmuJissekiNyuryokuKakuninList" property="youbi"/>
-
-                  <%
-                  if (DayOfWeek.SATURDAY.getRyaku().equals(youbi)) {
-                      color = "fontBlue";
-                  } else if (DayOfWeek.SUNDAY.getRyaku().equals(youbi)) {
-                      color = "fontRed";
-                  } else {
-                      color = "fontBlack";
-                  }
-                  %>
+                  <bean:define id="shukujitsuFlg" name="kinmuJissekiNyuryokuKakuninList" property="shukujitsuFlg"/>
+                              <%
+                              if (DayOfWeek.SUNDAY.getRyaku().equals(youbi)) {
+                                  color = "fontRed";
+                              } else if ((boolean)shukujitsuFlg){
+                              		color = "fontRed";
+                              } else if (DayOfWeek.SATURDAY.getRyaku().equals(youbi)) {
+                                 color = "fontBlue";
+                              } else {
+                                  color = "fontBlack";
+                              }
+                              %>
 
                   <td width="50px" align="center" class="<%=color %>">
                     <bean:write name="kinmuJissekiNyuryokuKakuninList" property="youbi" /><br>
