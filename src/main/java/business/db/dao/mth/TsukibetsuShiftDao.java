@@ -161,7 +161,8 @@ public class TsukibetsuShiftDao extends AbstractDao{
             strSql.append(" ( ");
             strSql.append("SHAIN_ID,");
             strSql.append("YEAR_MONTH_DAY,");
-            strSql.append("KIBOU_SHIFT_ID,");
+            //黒岩 KIBOU_SHIFT_IDをSHIFT_IDに変更
+            strSql.append("SHIFT_ID,");
             strSql.append("CREATE_SHAIN_ID,");
             strSql.append("CREATE_DT,");
             strSql.append("UPDATE_SHAIN_ID,");
@@ -214,7 +215,8 @@ public class TsukibetsuShiftDao extends AbstractDao{
             strSql.append("UPDATE ");
             strSql.append("T_SHIFT ");
             strSql.append("SET ");
-            strSql.append("KIBOU_SHIFT_ID = ?, ");
+            //黒岩 KIBOU_SHIFT_IDをSHIFT_IDに変更
+            strSql.append("SHIFT_ID = ?, ");
             strSql.append("UPDATE_SHAIN_ID = ?, ");
             strSql.append("UPDATE_DT = current_timestamp() ");
             strSql.append("WHERE ");
