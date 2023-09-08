@@ -82,7 +82,7 @@ public class ShukkinKibouNyuuryokuRegistAction extends ShukkinKibouAbstractActio
 
 		// シフトIDを取得する
 		Map<String, List<TsukibetsuShiftDto>> tsukibetsuShiftDtoMap = tsukibetsuShiftLogic
-				.getTsukibetsuShiftDtoMap(yearMonth, true);
+				.getTsukibetsuShiftDtoMap(yearMonth, false);
 
 		// セレクトボックスの取得
 		ComboListUtilLogic comboListUtils = new ComboListUtilLogic();

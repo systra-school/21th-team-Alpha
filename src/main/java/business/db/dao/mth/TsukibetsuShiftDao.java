@@ -161,7 +161,7 @@ public class TsukibetsuShiftDao extends AbstractDao{
             strSql.append(" ( ");
             strSql.append("SHAIN_ID,");
             strSql.append("YEAR_MONTH_DAY,");
-            strSql.append("SHIFT_ID,");
+            strSql.append("KIBOU_SHIFT_ID,");
             strSql.append("CREATE_SHAIN_ID,");
             strSql.append("CREATE_DT,");
             strSql.append("UPDATE_SHAIN_ID,");
