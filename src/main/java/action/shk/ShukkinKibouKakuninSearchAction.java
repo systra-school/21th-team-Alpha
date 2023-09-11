@@ -94,7 +94,11 @@ public class ShukkinKibouKakuninSearchAction extends ShukkinKibouAbstractAction{
 
         if (CheckUtils.isEmpty(kakuninDtoListList)) {
             // データなし
-            forward = CommonConstant.NODATA;
+        	ShukkinKibouKakuninBean shukkinKibouKakuninBean = new ShukkinKibouKakuninBean();
+        	shukkinKibouKakuninBean.setShainId(loginUserDto.getShainId());
+        	shukkinKibouKakuninBean.setShainName(loginUserDto.getShainName());
+
+            shukkinKibouNyuuryokuBeanList.add(shukkinKibouKakuninBean);
         } else {
             // データあり
             shukkinKibouNyuuryokuBeanList = dtoToBean(kakuninDtoListList, loginUserDto);
