@@ -6,8 +6,6 @@
  */
 package action.mst;
 
-import static  constant.CommonConstant.BunruiId;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -30,10 +28,11 @@ import business.logic.mst.ShainMstMntLogic;
 import business.logic.utils.CheckUtils;
 import business.logic.utils.ComboListUtilLogic;
 import constant.CommonConstant;
+import constant.CommonConstant.BunruiId;
 import constant.DbConstant.Mbunrui;
 import constant.RequestSessionNameConstant;
-import form.mst.ShainMstMntForm;
 import form.mst.ShainMstMntBean;
+import form.mst.ShainMstMntForm;
 
 
 /**
@@ -84,7 +83,7 @@ public class ShainMstMntInitAction extends Action {
         shainMstMntForm.setKengenCmbMap(comboMap);
 
         // 社員情報を取得する
-        Collection<ShainMstMntDto> mshainList = shainMstMntLogic.getShainData(loginUserDto);
+        Collection<ShainMstMntDto> mshainList = shainMstMntLogic.getShainData(loginUserDto, true);
 
         if (CheckUtils.isEmpty(mshainList)) {
             forward = CommonConstant.NODATA;
