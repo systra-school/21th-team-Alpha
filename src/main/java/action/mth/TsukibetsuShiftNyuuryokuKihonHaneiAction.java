@@ -18,7 +18,9 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
 import business.dto.LoginUserDto;
+import business.dto.bse.KihonShiftDto;
 import business.dto.mth.TsukibetsuShiftDto;
+import business.logic.bse.KihonShiftLogic;
 import business.logic.comparator.MethodComparator;
 import business.logic.mth.TsukibetsuShiftLogic;
 import business.logic.utils.CheckUtils;
@@ -66,21 +68,27 @@ public class TsukibetsuShiftNyuuryokuKihonHaneiAction extends TsukibetsuShiftNyu
         // 対象年月
         String yearMonth = CommonUtils.getFisicalDay(CommonConstant.yearMonthNoSl);
 
-        // ロジック生成
+        // Miku.Oosato ロジック生成 基本シフト
+        KihonShiftLogic kihonShiftLogic = new KihonShiftLogic();
+        
         TsukibetsuShiftLogic tsukibetsuShiftLogic = new TsukibetsuShiftLogic();
 
         // 対象年月の月情報を取得する。
         List<DateBean> dateBeanList = CommonUtils.getDateBeanList(yearMonth);
-
-        // 希望シフトIDを取得する
-        Map<String,List<TsukibetsuShiftDto>> tsukibetsuShiftDtoMap = tsukibetsuShiftLogic.getTsukibetsuShiftDtoMap(yearMonth, false);
-
+        
+        // 社員分の基本シフトマスタデータを取得　詳細設計あり
+        Map<String, KihonShiftDto> kihonShiftDataMap = kihonShiftLogic.getKihonShiftData();
+        
+        
         List<TsukibetsuShiftNyuuryokuBean> tsukibetsuShiftBeanList = new ArrayList<TsukibetsuShiftNyuuryokuBean>();
-
+        
         // セレクトボックスの取得
         ComboListUtilLogic comboListUtils = new ComboListUtilLogic();
         Map<String, String> shiftCmbMap = comboListUtils.getComboShift(true);
         Map<String, String> yearMonthCmbMap = comboListUtils.getComboYearMonth(CommonUtils.getFisicalDay(CommonConstant.yearMonthNoSl), 3, ComboListUtilLogic.KBN_YEARMONTH_NEXT, false);
+        
+        Map<String,List<TsukibetsuShiftDto>> tsukibetsuShiftDtoMap = tsukibetsuShiftLogic.getMonthlyData(dateBeanList, kihonShiftDataMap, shiftCmbMap, loginUserDto);
+        
 
         if (CheckUtils.isEmpty(tsukibetsuShiftDtoMap)) {
             // データなし
@@ -102,11 +110,11 @@ public class TsukibetsuShiftNyuuryokuKihonHaneiAction extends TsukibetsuShiftNyu
         tsukibetsuShiftForm.setDateBeanList(dateBeanList);
         tsukibetsuShiftForm.setYearMonth(yearMonth);
         // ページング用
-        tsukibetsuShiftForm.setMaxPage(CommonUtils.getMaxPage(tsukibetsuShiftDtoMap.size(), SHOW_LENGTH));
+        tsukibetsuShiftForm.setMaxPage(CommonUtils.getMaxPage(kihonShiftDataMap.size(), SHOW_LENGTH));
 
         return mapping.findForward(forward);
     }
-
+    
     /**
      * DtoからBeanへ変換する
      * @param tsukibetsuShiftDtoMap
