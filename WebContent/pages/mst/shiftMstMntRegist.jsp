@@ -27,11 +27,12 @@
     <script type="text/javascript" src="/kikin_test/pages/js/checkCommon.js"></script>
     <script type="text/javascript" src="/kikin_test/pages/js/message.js"></script>
     <script type="text/javascript" language="Javascript1.1">
-    <!--
+    
     /**
      * 登録処理を行う
      */
     function shiftMstMntRegist() {
+    	
 
         // 開始時間エラーメッセージ
         var startTimeErrMsg = '';
@@ -59,26 +60,27 @@
           breakTime.style.backgroundColor = 'white';
 
           if (!checkTime(varStartTime)) {
-              var strArr = ['開始時間'];
-              startTimeErrMsg = getMessage('E-MSG-000004', strArr);
+              var str = ['開始時間'];
+              startTimeErrMsg = getMessage('E-MSG-000004', str);
               startTime.style.backgroundColor = 'red';
           }
 
           if (!checkTime(varEndTime)) {
-              var strArr = ['終了時間'];
-              endTimeErrMsg = getMessage('E-MSG-000004', strArr);
+              var str = ['終了時間'];
+              endTimeErrMsg = getMessage('E-MSG-000004', str);
               endTime.style.backgroundColor = 'red';
           }
 
           if (!checkTime(barBreakTime)) {
-              var strArr = ['休憩時間'];
-              breakTimeErrMsg = getMessage('E-MSG-000004', strArr);
+              var str = ['休憩時間'];
+              breakTimeErrMsg = getMessage('E-MSG-000004', str);
               breakTime.style.backgroundColor = 'red';
           }
 
           // from - to のチェック
           if (!checkTimeCompare(varStartTime, varEndTime)) {
-            if (checkTime(startTime) && checkTime(endTime)) {
+        	  //if文内の変数名の誤り。startTime→varStartTime、endTime→varEndTimeに変更
+            if (checkTime(varStartTime) && checkTime(varEndTime)) {
                 fromToErrMsg = getMessageCodeOnly('E-MSG-000005');
                 startTime.style.backgroundColor = 'red';
                 endTime.style.backgroundColor = 'red';
@@ -98,7 +100,7 @@
         document.forms[0].submit();
     }
 
-    -->
+   
     </script>
 
     <title>シフトマスタメンテナンス画面</title>
