@@ -78,7 +78,8 @@ public class ShukkinKibouNyuuryokuRegistAction extends ShukkinKibouAbstractActio
 				dateBeanList);
 
 		// 登録・更新処理
-		tsukibetsuShiftLogic.registTsukibetsuShift(tsukibetsuShiftDtoListList, loginUserDto);
+		boolean shiftWhitch = false;
+		tsukibetsuShiftLogic.registTsukibetsuShift(tsukibetsuShiftDtoListList, loginUserDto, shiftWhitch);
 
 		// シフトIDを取得する
 		Map<String, List<TsukibetsuShiftDto>> tsukibetsuShiftDtoMap = tsukibetsuShiftLogic

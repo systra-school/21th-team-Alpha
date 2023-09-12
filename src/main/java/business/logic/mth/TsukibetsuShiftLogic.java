@@ -111,7 +111,7 @@ public class TsukibetsuShiftLogic {
      * @author naraki
      * @throws SQLException
      */
-    public void registTsukibetsuShift(List<List<TsukibetsuShiftDto>> tsukibetsuShiftDtoListList, LoginUserDto loginUserDto) throws SQLException {
+    public void registTsukibetsuShift(List<List<TsukibetsuShiftDto>> tsukibetsuShiftDtoListList, LoginUserDto loginUserDto, boolean shiftWhitch) throws SQLException {
 
         // Dao
         TsukibetsuShiftDao dao = new TsukibetsuShiftDao();
@@ -137,10 +137,21 @@ public class TsukibetsuShiftLogic {
 
                     if (isData) {
                         // 更新
-                        dao.updateShiftTbl(tsukibetsuShiftDto, loginUserDto);
+                    	if (shiftWhitch) {
+							//月別
+                    		dao.updateShiftTbl(tsukibetsuShiftDto, loginUserDto);
+						}else {
+							//kibou
+							dao.updateKibouShiftTbl(tsukibetsuShiftDto, loginUserDto);
+						}
                     } else {
                         // 登録
-                        dao.registShiftTbl(tsukibetsuShiftDto, loginUserDto);
+                    	if (shiftWhitch) {
+                    		//月別
+                    		dao.registShiftTbl(tsukibetsuShiftDto, loginUserDto);
+						}else {
+							dao.registKibouShiftTbl(tsukibetsuShiftDto, loginUserDto);
+						}
                     }
 
                 }
