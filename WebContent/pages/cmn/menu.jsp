@@ -17,8 +17,16 @@
     <script type="text/javascript" src="/kikin_test/pages/js/common.js"></script>
     <script type="text/javascript" src="/kikin_test/pages/js/checkCommon.js"></script>
     <script type="text/javascript" src="/kikin_test/pages/js/message.js"></script>
-    
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+	
+	<style>
+	      body {
+	        font-family: 'Sawarabi Mincho', serif;
+	      }
+    </style>
+	
     <title>メニュー画面</title>
     <link href="/kikin_test/pages/css/common.css" rel="stylesheet" type="text/css" />
   </head>
@@ -34,7 +42,7 @@
             <logic:equal name="<%=RequestSessionNameConstant.SESSION_CMN_LOGIN_USER_INFO %>"
                          property="kengenId"
                          value="<%=CommonConstant.Kengen.KANRISYA.getId() %>">
-                メニュー(管理者)
+               メニュー(管理者)
             </logic:equal>
 
             <logic:equal name="<%=RequestSessionNameConstant.SESSION_CMN_LOGIN_USER_INFO %>"
