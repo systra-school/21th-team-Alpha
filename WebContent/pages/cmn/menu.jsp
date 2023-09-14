@@ -17,16 +17,7 @@
     <script type="text/javascript" src="/kikin_test/pages/js/common.js"></script>
     <script type="text/javascript" src="/kikin_test/pages/js/checkCommon.js"></script>
     <script type="text/javascript" src="/kikin_test/pages/js/message.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
-	
-	<style>
-	      body {
-	        font-family: 'Sawarabi Mincho', serif;
-	      }
-    </style>
-	
+    
     <title>ƒƒjƒ…[‰æ–Ê</title>
     <link href="/kikin_test/pages/css/common.css" rel="stylesheet" type="text/css" />
   </head>

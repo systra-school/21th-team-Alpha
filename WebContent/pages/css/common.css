@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap'); 
 /*
 * body定義
 */
 body {
+	font-family: 'Sawarabi Mincho', serif;
     background-color: #04FD80;
     overflow: hidden;
 }
