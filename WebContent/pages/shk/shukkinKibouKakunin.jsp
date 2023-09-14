@@ -107,7 +107,8 @@
                       </logic:iterate>
                     </table>
                   </td>
-                  <td>
+                  <%-- •Šâ tdƒ^ƒO‚Évalign="top"‚ð“ü‚ê‚Ä•\‚Ì‚‚³‚ð‘µ‚¦‚½ --%>
+                  <td valign="top">
                     <div style="overflow-x: auto;overflow-y: hidden; width:1067px;height: 100%; text-align:center;">
                       <table border="1" cellpadding="0" cellspacing="0">
                         <tr class="tblHeader">

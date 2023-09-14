@@ -6,7 +6,6 @@
  */
 package business.db.dao.bse;
 
-import static constant.DbConstant.M_base_shift;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,11 +15,10 @@ import java.util.Map;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import constant.DbConstant.M_shain;
-
-
 import business.db.dao.AbstractDao;
 import business.dto.bse.KihonShiftDto;
+import constant.DbConstant.M_base_shift;
+import constant.DbConstant.M_shain;
 
 /**
  * 説明：基本シフトDao
