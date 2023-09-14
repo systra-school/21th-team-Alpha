@@ -2,7 +2,7 @@
 * body定義
 */
 body {
-    background-color: #66CCFF;
+    background-color: #04FD80;
     overflow: hidden;
 }
 errorbody {
@@ -21,7 +21,7 @@ errorbody {
     width: 100%;
     margin: 0px;
     padding: 5px;
-    background-color: #66CCFF;
+    background-color: #04FD80;
 }
 
 /*
@@ -38,10 +38,11 @@ errorbody {
 }
 #headCenter {
     font-size: 24px;
-    color: #FFFF00;
+    font-weight: bold;
+    color: #000;
     width:800px;
     text-align:center;
-	text-indent: 120px;
+	text-indent: 0px;
 }
 #headRight {
     width:200px;
@@ -51,8 +52,9 @@ errorbody {
 * メニュー画面のボタン
 */
 .menuBlock {
-    margin-left:30px;
-    float:left;
+	display:inline-block;
+    margin:30px;
+    float:none;
     text-align:"center";
     padding:30px;
 }
@@ -141,11 +143,21 @@ errorbody {
 * ボタンサイズ大
 */
 .bigButton {
-    width: 200px;
-    height: 50px;
-    background-color:rgb(192, 192, 192) ;
-   border-color: white black black white;
-}
+    border-radius: 5px;
+    display: block;
+    width: 300px;
+    height: 80px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    background-image: url(/kikin_db/pages/picture/gara3.jpg);
+    color: #000;
+    text-decoration: none;
+    font-weight:bold;
+    font-size: 100%;
+    text-align: center;
+    margin: 10px 0;
+    border: 3px solid #000;
+    }
 /*
 * ボタンサイズロング
 */
@@ -164,7 +176,6 @@ errorbody {
     top: 5px;
     left: 10px;
 }
-
 /*
 * テーブルヘッダーのスタイル
 */

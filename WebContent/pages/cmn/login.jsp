@@ -7,6 +7,7 @@
 	<meta http-equiv="Pragma" content="no-cache">
 	<meta http-equiv="Cache-Control" content="no-cache">
 	<meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
+	<meta name="viewport" content="width=device-width">
 	<%-- 黒岩 エラーメッセージ表示 --%>
 	<% 
    Boolean loginErrorFlag = (Boolean) request.getAttribute("loginErrorFlag");
@@ -25,6 +26,7 @@
 <body>
         <div id="wrapper">
         <div id="header">
+        <div align="center">
             <table>
               <tr>
                   <td id="headLeft">
@@ -39,6 +41,7 @@
               </tr>
             </table>
         </div>
+        </div>
 
 
 		<div id="gymBody">
@@ -50,7 +53,7 @@
 		      <html:password property="password" size="16" redisplay="false" value=""/>
 		      <br/>
 		      <br/>
-		      <html:submit property="submit" value="ログイン" />
+		      <html:submit  property="submit" value="ログイン" />
 		      <html:reset value="リセット" />
 		    </html:form>
 		  </div>
