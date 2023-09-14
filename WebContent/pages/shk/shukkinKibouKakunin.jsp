@@ -1,4 +1,5 @@
 <!-- shukkinKibouKakunin.jsp -->
+<%@page import="org.omg.Security.DayOfTheWeek"%>
 <%@page import="constant.CommonConstant.DayOfWeek"%>
 <%@page import="business.logic.utils.CheckUtils"%>
 <%@page import="form.common.DateBean"%>
@@ -229,9 +230,14 @@
                                   color = "fontBlack";
                               }
                               %>
-
+                              
+		
                               <td width="40px" align="center" valign="middle" class="<%=color %>">
+                              <% if((boolean)shukujitsuFlg){%>
+                              èj<br>
+                              <%}else{%>
                                 <bean:write property="youbi" name="dateBeanList"/>
+                               <%}%>
                               </td>
                           </logic:iterate>
                         </tr>

@@ -226,7 +226,11 @@ String color = "";
                               %>
 
                               <td width="40px" align="center" valign="middle" class="<%=color %>">
+                              <% if((boolean)shukujitsuFlg){%>
+                              èj<br>
+                              <%}else{%>
                                 <bean:write property="youbi" name="dateBeanList"/>
+                               <%}%>
                               </td>
                           </logic:iterate>
                         </tr>

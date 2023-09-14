@@ -209,7 +209,11 @@
                               %>
 
                   <td width="50px" align="center" class="<%=color %>">
+                  <% if((boolean)shukujitsuFlg){%>
+                  èj<br>
+                   <%}else{%>
                     <bean:write name="kinmuJissekiNyuryokuKakuninList" property="youbi" /><br>
+                    <%}%>
                   </td>
                   <td width="100px" align="center">
                     <bean:write name="kinmuJissekiNyuryokuKakuninList" property="symbol" /><br>

@@ -259,7 +259,11 @@ if (listSize > intShowLength) {
                               %>
 
                           <td width="40px" align="center" class="<%=color %>">
+                          <% if((boolean)shukujitsuFlg){%>
+                              èj<br>
+                              <%}else{%>
                             <bean:write property="youbi" name="dateBeanList"/><br>
+                               <%}%>
                           </td>
                       </logic:iterate>
                       </tr>
