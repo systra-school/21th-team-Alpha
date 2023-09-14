@@ -53,10 +53,10 @@ errorbody {
 */
 .menuBlock {
 	display:inline-block;
-    margin:30px;
+    margin:10px 25px;
     float:none;
     text-align:"center";
-    padding:30px;
+    padding:10px;
 }
 
 /*
@@ -145,8 +145,8 @@ errorbody {
 .bigButton {
     border-radius: 5px;
     display: block;
-    width: 300px;
-    height: 80px;
+    width: 310px;
+    height: 85px;
     padding: 0 10px;
     box-sizing: border-box;
     background-image: url(/kikin_db/pages/picture/gara3.jpg);
