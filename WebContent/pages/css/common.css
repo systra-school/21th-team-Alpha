@@ -15,7 +15,6 @@ errorbody {
     padding:0px;
 }
 
-
 /*
 * ヘッダー、フッター共通定義
 */
@@ -35,19 +34,19 @@ errorbody {
     width:100%;
 }
 #headLeft {
-    width:200px;
+    width:220px;
     text-align:left;
 }
 #headCenter {
     font-size: 24px;
     font-weight: bold;
     color: #000;
-    width:800px;
+    width:880px;
     text-align:center;
 	text-indent: 0px;
 }
 #headRight {
-    width:200px;
+    width:155px;
     text-align:right;
 }
 /*
@@ -55,7 +54,7 @@ errorbody {
 */
 .menuBlock {
 	display:inline-block;
-    margin:10px 25px;
+    margin:15px 55px;
     float:none;
     text-align:"center";
     padding:10px;
