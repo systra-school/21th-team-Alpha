@@ -384,7 +384,7 @@ if (listSize > intShowLength) {
       <div id="footer">
         <div style="margin-left:50px;">
         	<%--Miku.Oosato ボタンカラー追加（cssファイルでは反映しないため）--%>
-          <input value="凡例表示" type="button" class="lngButton" style="border-color: white black black white; background-color:rgb(192, 192, 192)" onclick="openWindow()" />
+          <input value="凡例表示" type="button" class="lngButton" style="border: none; background-color:#ffff80;" onclick="openWindow()" />
        </div>
 
         <table>

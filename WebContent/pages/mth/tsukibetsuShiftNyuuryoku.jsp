@@ -559,15 +559,15 @@ if (listSize > intShowLength) {
       <%--Miku.Oosato •\‚ÌƒYƒŒ’²® --%>
       <div style="margin-left:80px;">
       <%--Miku.Oosato ƒ{ƒ^ƒ“ƒJƒ‰[’Ç‰Áicssƒtƒ@ƒCƒ‹‚Å‚Í”½‰f‚µ‚È‚¢‚½‚ßj--%>
-          <input value="–}—á•\Ž¦" type="button" class="lngButton" style="border-color: white black black white; background-color:rgb(192, 192, 192)" onclick="openWindow()" />
+          <input value="–}—á•\Ž¦" type="button" class="lngButton" style="border:none; background-color:#ffff80;" onclick="openWindow()" />
           <%--takaya onclick’Ç‰Á--%>
-          <input value="Šî–{ƒVƒtƒg”½‰f" type="button" class="lngButton" style="border-color: white black black white; background-color:rgb(192, 192, 192)" onclick="submitShukkinKihon()" />
-          <input value="o‹ÎŠó–]“ú”½‰f" type="button" class="lngButton" style="border-color: white black black white; background-color:rgb(192, 192, 192)" onclick="submitShukkinKibou()" />
+          <input value="Šî–{ƒVƒtƒg”½‰f" type="button" class="lngButton" style="border:none; background-color:#FFD700;" onclick="submitShukkinKihon()" />
+          <input value="o‹ÎŠó–]“ú”½‰f" type="button" class="lngButton" style="border:none; background-color:#FFD700;" onclick="submitShukkinKibou()" />
           
         </div>
         <%--•£ã@V‚½‚É“o˜^—p‚ÌdivƒNƒ‰ƒX‚ðì¬‚µAmargin‚ð’²®‚µ‚½ --%>
         <div style="margin-left:1100px; margin-top:-40px;">
-        <input value="“o˜^" type="button"  class="smlButton" style="border-color: white black black white; background-color:rgb(192, 192, 192)" onclick="submitRegist()" />
+        <input value="“o˜^" type="button"  class="smlButton" style="border:none; background-color:#ff80ff;" onclick="submitRegist()" />
         </div>
         <table>
           <tr>

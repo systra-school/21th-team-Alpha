@@ -138,11 +138,14 @@ errorbody {
 	border-radius: 5px;
     width: 100px;
     height: 30px;
-    background-color:rgb(192, 192, 192) ;
-   	border-color: white black black white;
+    background-color:#ff80ff ;
+    border: 1px;
+   	box-shadow: 7px 3px 3px rgba(0, 0, 0, 0.5); 
 }
 .smlButton:hover {
-	opacity:.5;
+	border:none;
+    transform: translateY(4px);
+  	box-shadow: none;
 }
 
 /*
@@ -175,12 +178,18 @@ errorbody {
 * ボタンサイズロング
 */
 .lngButton {
+	border-radius: 5px;
     width: 200px;
     height: 30px;
-    background-color:rgb(192, 192, 192) ;
-    border-color: white black black white;
+    background-color:#ffff80;
+    border:none;
+    box-shadow: 8px 3px 3px rgba(0, 0, 0, 0.5); 
 }
-
+.lngButton:hover {
+	border:none;
+    transform: translateY(4px);
+  	box-shadow: none;
+}
 
 /*
 * 戻るボタンのスタイル
