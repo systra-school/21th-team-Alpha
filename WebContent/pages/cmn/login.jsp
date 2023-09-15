@@ -8,6 +8,7 @@
 	<meta http-equiv="Cache-Control" content="no-cache">
 	<meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT">
 	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="common.css">
 	<%-- 黒岩 エラーメッセージ表示 --%>
 	<% 
    Boolean loginErrorFlag = (Boolean) request.getAttribute("loginErrorFlag");
@@ -46,15 +47,17 @@
 
 		<div id="gymBody">
 		  <div align="center">
-		    <div>ID・パスワードを入力してください。</div>
+		    <div style="width:350px; height: 30px; font-size:20">ID・パスワードを入力してください。</div>
 		    <html:form action="/login" onsubmit="return validateLoginForm(this)">
-		      <html:text property="shainId" size="16" value="" />
+		      <html:text property="shainId" size="16" value="" style="width:350px; height:35px"/>
 		      <br/>
-		      <html:password property="password" size="16" redisplay="false" value=""/>
+		      <html:password property="password" size="16" redisplay="false" value="" style="width:350px; height:35px"/>
 		      <br/>
 		      <br/>
-		      <html:submit  property="submit" value="ログイン" />
-		      <html:reset value="リセット" />
+		      <html:submit  property="submit" value="ログイン" style="border-radius: 5px; width:170px; height:30px; border:1px solid #808080; background-color:	#00FFFF; " onmouseover="this.style.opacity=0.7" onmouseout="this.style.opacity=1.0"/>
+		      <br>
+		      <br>
+		      <html:reset value="リセット" style="border-radius: 5px; border:1px solid #808080;width:170px; height:30px; background-color:white;" onmouseover="this.style.opacity=0.7" onmouseout="this.style.opacity=1.0" />
 		    </html:form>
 		  </div>
 		</div>
