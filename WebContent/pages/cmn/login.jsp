@@ -28,13 +28,14 @@
         <div id="wrapper">
         <div id="header">
         <div align="center">
+        <h1 style="margin: 10px" >Extra Ordinary Hashimoto</h1>
             <table>
               <tr>
                   <td id="headLeft">
                     　
                   </td>
                   <td id="headCenter" style="text-indent:-60px">
-                    ログイン
+                    <%-- ログイン --%>
                   </td>
                   <td id="headRight">
                     　

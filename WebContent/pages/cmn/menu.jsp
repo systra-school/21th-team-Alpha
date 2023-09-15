@@ -141,13 +141,15 @@
         <table>
           <tr>
             <td id="footLeft">
-              　
+              <div style="font-size:5px;">
+              <p>Extra<br>Ordinary<br>Hashimoto</p>
+              </div>
             </td>
             <td id="footCenter">
               　
             </td>
             <td id="footRight">
-              　
+            　
             </td>
           </tr>
         </table>
