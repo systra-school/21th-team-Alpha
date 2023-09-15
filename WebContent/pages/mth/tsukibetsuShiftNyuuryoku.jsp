@@ -114,11 +114,11 @@ if (listSize > intShowLength) {
         </table>
       </div>
       <%--Miku.Oosato 表のズレ調整 --%>
-      <div id="gymBody" style="overflow: auto;">
+      <div id="gymBody" style=" height: 550px;overflow:hidden;">
         <html:form action="/tsukibetsuShiftNyuuryokuPage" >
        	 <%--Miku.Oosato 表のズレ調整 --%>
           <div style="margin-left:80px;">
-            <div style="height: 25px;">
+            <div style="height: 24px;">
               表示年月：
               <bean:define id="sessionYearMonth" name="tsukibetsuShiftNyuuryokuForm" property="yearMonth" type="String"/>
               <html:select property="yearMonth" name="tsukibetsuShiftNyuuryokuForm"  onchange="submitSearch()">
@@ -142,13 +142,13 @@ if (listSize > intShowLength) {
                       </td>
                     </tr>
                     <tr height="<%=heightSize %>px">
-                      <td width="150px" align="center">
+                      <td width="150px" align="center" style="font-size:0.98em">
                       社員名
                       </td>
                     </tr>
                     <logic:iterate offset="offset" length="<%=showLength %>"  id="tsukibetsuShiftNyuuryokuBeanList" name="tsukibetsuShiftNyuuryokuForm" property="tsukibetsuShiftNyuuryokuBeanList">
-                      <tr height="<%=heightSize %>px">
-                        <td width="150px" align="center">
+                      <tr height="<%=heightSize - 5 %>px">
+                        <td width="150px" align="center" style="font-size:0.9em">
                           <bean:write property="shainName" name="tsukibetsuShiftNyuuryokuBeanList"/><br>
                         </td>
                       </tr>
@@ -156,7 +156,7 @@ if (listSize > intShowLength) {
                   </table>
                 </td>
                 <td>
-                  <div style="overflow-x: auto;overflow-y: hidden; width:985px;height: <%=heightSize * (listSize + 2) + 18 %>px; text-align:center;">
+                  <div style="overflow-x: auto;overflow-y: hidden;  width:985px;height: 465px; text-align:center;">
                     <table class="tblHeader" border="1" cellpadding="0" cellspacing="0">
                       <tr height="<%=heightSize %>px">
                         <td width="40px" align="center">
@@ -261,7 +261,7 @@ if (listSize > intShowLength) {
                         </td>
                         <% } %>
                       </tr>
-                      <tr height="<%=heightSize %>px">
+                      <tr height="<%=heightSize %>px" style="font-size:0.85em">
                         <logic:iterate id="dateBeanList" name="tsukibetsuShiftNyuuryokuForm" property="dateBeanList">
                           <bean:define id="youbi" name="dateBeanList" property="youbi"/>
                           <bean:define id="shukujitsuFlg" name="dateBeanList" property="shukujitsuFlg"/>
@@ -288,7 +288,7 @@ if (listSize > intShowLength) {
                       </tr>
                       <logic:iterate offset="offset" length="<%=showLength %>" id="tsukibetsuShiftNyuuryokuBeanList" name="tsukibetsuShiftNyuuryokuForm" property="tsukibetsuShiftNyuuryokuBeanList">
                         <html:hidden name="tsukibetsuShiftNyuuryokuBeanList" property="registFlg" value="true" indexed="true"/>
-                        <tr height="<%=heightSize %>px">
+                        <tr height="<%=heightSize - 3 %>px">
                           <td width="40px" align="center" valign="middle">
                             <html:select property="shiftId01" name="tsukibetsuShiftNyuuryokuBeanList" indexed="true">
                             <html:optionsCollection name="tsukibetsuShiftNyuuryokuForm"
@@ -557,7 +557,7 @@ if (listSize > intShowLength) {
       </div>
       <div id="footer">
       <%--Miku.Oosato 表のズレ調整 --%>
-      <div style="margin-left:80px;">
+      <div style="margin-left:80px;margin-top:-55px;">
       <%--Miku.Oosato ボタンカラー追加（cssファイルでは反映しないため）--%>
           <input value="凡例表示" type="button" class="lngButton" style="border:none; background-color:#ffff80;" onclick="openWindow()" />
           <%--takaya onclick追加--%>
