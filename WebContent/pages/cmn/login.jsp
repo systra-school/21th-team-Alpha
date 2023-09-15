@@ -33,7 +33,7 @@
                   <td id="headLeft">
                     Å@
                   </td>
-                  <td id="headCenter">
+                  <td id="headCenter" style="text-indent:-60px">
                     ÉçÉOÉCÉì
                   </td>
                   <td id="headRight">
