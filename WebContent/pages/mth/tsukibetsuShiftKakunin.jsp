@@ -96,7 +96,7 @@ if (listSize > intShowLength) {
           </tr>
         </table>
       </div>
-      <div id="gymBody" style="overflow:auto; height: 470px;">
+      <div id="gymBody" style="overflow:hidden; height: 470px;">
         <html:form action="/shukkinKibouKakuninInit" >
           <div style="margin-left:50px;">
             <div style="height: 25px;">
@@ -123,13 +123,13 @@ if (listSize > intShowLength) {
                       </td>
                     </tr>
                     <tr height="<%=heightSize %>px">
-                      <td width="150px" align="center">
+                      <td width="150px" align="center" style="font-size:0.85em">
                       社員名
                       </td>
                     </tr>
                     <logic:iterate offset="offset" length="<%=showLength %>"  id="tsukibetsuShiftKakuninBeanList" name="tsukibetsuShiftKakuninForm" property="tsukibetsuShiftKakuninBeanList">
                       <tr  class="tblBody"  height="<%=heightSize %>px">
-                        <td width="150px" align="center">
+                        <td width="150px" align="center" style="font-size:0.85em">
                           <bean:write property="shainName" name="tsukibetsuShiftKakuninBeanList"/><br>
                         </td>
                       </tr>
@@ -242,7 +242,7 @@ if (listSize > intShowLength) {
                         </td>
                         <% } %>
                       </tr>
-                      <tr height="<%=heightSize %>px">
+                      <tr height="<%=heightSize %>px" style="font-size:0.85em">
                       <logic:iterate id="dateBeanList" name="tsukibetsuShiftKakuninForm" property="dateBeanList">
                       <bean:define id="youbiEnum" name="dateBeanList" property="youbiEnum"/>
                       <bean:define id="shukujitsuFlg" name="dateBeanList" property="shukujitsuFlg"/>
@@ -259,17 +259,13 @@ if (listSize > intShowLength) {
                               %>
 
                           <td width="40px" align="center" class="<%=color %>">
-                          <% if((boolean)shukujitsuFlg){%>
-                              祝<br>
-                              <%}else{%>
                             <bean:write property="youbi" name="dateBeanList"/><br>
-                               <%}%>
                           </td>
                       </logic:iterate>
                       </tr>
                       <logic:iterate offset="offset" length="<%=showLength %>" id="tsukibetsuShiftKakuninBeanList" name="tsukibetsuShiftKakuninForm" property="tsukibetsuShiftKakuninBeanList">
                         <html:hidden name="tsukibetsuShiftKakuninBeanList" property="registFlg" value="true" indexed="true"/>
-                        <tr  class="tblBody"  height="<%=heightSize %>px">
+                        <tr  class="tblBody"  height="<%=heightSize %>px" style="font-size:0.85em">
                           <td width="40px" align="center" valign="middle">
                             <bean:write name="tsukibetsuShiftKakuninBeanList" property="symbol01"/><br>
                           </td>
@@ -384,7 +380,7 @@ if (listSize > intShowLength) {
       <div id="footer">
         <div style="margin-left:50px;">
         	<%--Miku.Oosato ボタンカラー追加（cssファイルでは反映しないため）--%>
-          <input value="凡例表示" type="button" class="lngButton" style="border: none; background-color:#ffff80;" onclick="openWindow()" />
+          <input value="凡例表示" type="button" class="lngButton" style="border-color: white black black white; background-color:rgb(192, 192, 192)" onclick="openWindow()" />
        </div>
 
         <table>

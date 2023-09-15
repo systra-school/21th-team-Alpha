@@ -84,7 +84,7 @@
             <bean:write name="shukkinKibouKakuninForm" property="cntPage"/>/
             <bean:write name="shukkinKibouKakuninForm" property="maxPage"/>
             
-            <div style="overflow: auto; height: 450px; width: 1150px; margin-left:100px;" >
+            <div style="overflow: hidden; height: 450px; width: 1150px; margin-left:100px;" >
               <table width="1100px" cellpadding="0" cellspacing="0">
                 <tr>
                   <td width="150px" valign="top">
@@ -95,13 +95,13 @@
                         </td>
                       </tr>
                       <tr class="tblHeader">
-                        <td width="150px" align="center">
+                        <td width="150px" align="center" style="font-size:0.85em">
                         ŽÐˆõ–¼
                         </td>
                       </tr>
                       <logic:iterate offset="offset" length="<%=showLength %>" id="shukkinKibouKakuninBeanList" name="shukkinKibouKakuninForm" property="shukkinKibouKakuninBeanList">
                         <tr class="tblBody">
-                          <td width="150px" align="center" class="tblBody">
+                          <td width="150px" align="center" class="tblBody" style="font-size:0.85em">
                             <bean:write property="shainName" name="shukkinKibouKakuninBeanList"/><br>
                           </td>
                         </tr>
@@ -215,7 +215,7 @@
                           </td>
                           <% } %>
                         </tr>
-                        <tr class="tblHeader">
+                        <tr class="tblHeader" style="font-size:0.85em">
                           <logic:iterate id="dateBeanList" name="shukkinKibouKakuninForm" property="dateBeanList">
                           <bean:define id="youbiEnum" name="dateBeanList" property="youbiEnum"/>
                           <bean:define id="shukujitsuFlg" name="dateBeanList" property="shukujitsuFlg"/>
@@ -242,7 +242,7 @@
                           </logic:iterate>
                         </tr>
                         <logic:iterate offset="offset"  length="<%=showLength %>" id="shukkinKibouKakuninBeanList" name="shukkinKibouKakuninForm" property="shukkinKibouKakuninBeanList">
-                          <tr class="tblBody">
+                          <tr class="tblBody" style="font-size:0.85em">
                             <td width="40px" align="center" valign="middle" class="tblBody">
                               <bean:write property="symbol01" name="shukkinKibouKakuninBeanList" />
                             </td>
